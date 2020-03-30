@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Bell</string>
+    <string name="textviewword">Guess Word</string>
+</resources>
