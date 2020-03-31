@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">bell_hangma</string>
+    <string name="textviewword">Guess Word</string>
+</resources>
