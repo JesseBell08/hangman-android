@@ -1,4 +1,13 @@
 <resources>
-    <string name="app_name">bell_hangma</string>
+    <string name="app_name">Bell Hangman</string>
     <string name="textviewword">Guess Word</string>
+    <string name="textview" />
+    <string name="todo" />
+    <string name="textview2" />
+    <string name="reveal_word">Reveal Word</string>
+    <string name="score">Score:</string>
+    <string name="wins">Wins</string>
+    <string name="loses">Losses</string>
+    <string name="tries" />
+    <string name="reset_score">Reset Scores</string>
 </resources>

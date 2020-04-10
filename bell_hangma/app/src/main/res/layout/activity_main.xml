@@ -7,15 +7,27 @@
     tools:context=".MainActivity">
 
 
-    <ImageView
-        android:id="@+id/ivHangman"
+    <TextView
+        android:id="@+id/tvScoreTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/score"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toEndOf="@+id/ivHangman"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivHangman"
+        android:layout_width="226dp"
+        android:layout_height="228dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.302"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
         app:srcCompat="@drawable/h" />
 
     <TextView
@@ -25,41 +37,79 @@
         android:text="@string/textviewword"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMsg" />
 
     <TextView
         android:id="@+id/tvGuessedLetters"
-        android:layout_width="313dp"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="30sp"
+        android:layout_width="209dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="20dp"
+        android:gravity="start"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.638"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvWord" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="188dp"
-        android:layout_height="55dp"
-        android:onClick="onClickNext"
-        android:text="Button"
+    <TextView
+        android:id="@+id/tvMsg"
+        android:layout_width="274dp"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:text="@string/textview"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivHangman" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="59dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="52dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/btnReveal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickReveal"
+        android:text="@string/reveal_word"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="gone" />
+        app:layout_constraintHorizontal_bias="0.29"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGuessedLetters" />
+
+    <TextView
+        android:id="@+id/tvScoreWins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wins"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivHangman"
+        app:layout_constraintTop_toBottomOf="@+id/tvScoreTitle" />
+
+    <TextView
+        android:id="@+id/tvScoreLoses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivHangman"
+        app:layout_constraintTop_toBottomOf="@+id/tvScoreWins" />
+
+    <TextView
+        android:id="@+id/labelGuess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="44dp"
+        android:text="@string/tries"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGuessedLetters"
+        app:layout_constraintEnd_toStartOf="@+id/tvGuessedLetters" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset_score"
+        android:onClick="onClickResetScore"
+        app:layout_constraintStart_toEndOf="@+id/btnReveal"
+        app:layout_constraintTop_toBottomOf="@+id/tvGuessedLetters" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

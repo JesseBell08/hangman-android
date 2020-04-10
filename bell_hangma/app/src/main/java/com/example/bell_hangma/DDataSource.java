@@ -49,7 +49,9 @@ public class DDataSource {
                 null,
                 null
         );
-        c.moveToFirst();
+        if (c != null) {
+            c.moveToFirst();
+        }
         Word returnWord = new Word(c.getString(0));
         return returnWord;
 
